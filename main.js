@@ -1,5 +1,7 @@
 const app = document.getElementById('app')
 
+const suscriptores=[]
+
 app.innerHTML = 
 `<!-- SLIDER -->
     <section class="slider">
@@ -42,3 +44,19 @@ app.innerHTML =
             <input type="submit" id="submit" value="Enviar">
         </form>
     </section>`
+
+    const addSubs = (event)=>{
+        event.preventDefault()
+        console.log('formulario enviado')
+         const nombre= document.getElementById('nombre').value
+         const email= document.getElementById('email').value
+
+         const subs={
+            nombre: nombre,
+            email: email
+          }
+          suscriptores.push(subs)
+          console.log(suscriptores)
+    }
+
+    document.querySelector('.subscribe-form').addEventListener('submit', addSubs)
