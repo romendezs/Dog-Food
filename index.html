@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog's Food</title>
-    <link rel="stylesheet" href="./style.css">
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/lightslider.js"></script>
 </head>
 <body>
-    <div id="app">
-        
-    </div>
-    <script src="./main.js"></script>
+    <div id="app"></div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#light-slider").lightSlider();
+        });
+    </script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
