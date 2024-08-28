@@ -1,6 +1,7 @@
 import './CSS/style.css'
 import {productSlider} from './components/product-slider';
 import {heroSlider,SelectedImage, SelectPrev, SelectNext} from './components/heroSlider';
+import { subscribeForm, addSubs} from './components/subscribe-form';
 
 
 document.querySelector('#app').innerHTML = heroSlider();
@@ -18,20 +19,7 @@ document.querySelector('#app').innerHTML += `<!-- NAVBAR -->
 
     </nav>`
 document.querySelector('#app').innerHTML += productSlider();
-document.querySelector('#app').innerHTML += `<!-- SUBSCRIBIRSE -->
-    <section class="subscribe">
-        <h2>¡Subscríbete para obtener las mejores ofertas!</h2>
-
-        <form class="subscribe-form" action="">
-            <label for="Name">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Escribe tu nombre">
-
-            <label for="Email">Email:</label>
-            <input type="email" id="email" placeholder="Correo Electronico">
-
-            <input type="submit" id="submit" value="Enviar">
-        </form>
-    </section>`
+document.querySelector('#app').innerHTML += subscribeForm();
 
     //SLIDER 
     const next = document.getElementById('next')
@@ -53,3 +41,7 @@ document.querySelector('#app').innerHTML += `<!-- SUBSCRIBIRSE -->
     
     next.addEventListener('click', SelectNext)
     prev.addEventListener('click', SelectPrev)
+
+    //SUBSCRIBE-FORM
+    document.querySelector('.subscribe-form').addEventListener('submit', addSubs)
+
