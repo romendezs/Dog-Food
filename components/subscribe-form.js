@@ -3,11 +3,11 @@ export const subscribeForm= ()=>{
     <section class="subscribe">
         <h2>¡Subscríbete para obtener las mejores ofertas!</h2>
 
-        <form class="subscribe-form" action="">
-            <label for="Name">Nombre:</label>
+        <form class="subscribe-form" action="" autocomplete="on">
+            <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" placeholder="Escribe tu nombre">
 
-            <label for="Email">Email:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" placeholder="Correo Electronico">
 
             <input type="submit" id="submit" value="Enviar">
