@@ -267,6 +267,7 @@ a{
     color: white;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .card-title{
@@ -279,25 +280,34 @@ a{
 }
 
 .model{
-    height: 350px;
+    height: 300px;
     max-height: 90%;
     max-width: 100%;
 }
 /* SUBSCRIPCION */
 .subscribe{
     height: 100vh;
-    display: grid;
-    grid-template: 1fr / repeat(2, 50%);
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #757474;
+    background: linear-gradient(to bottom, #02aab0, #00cdac);
 }
 
-.subscribe h2{
-    padding: 3rem;
-    font-size: 3.5rem;
-    text-align: center;
-    color: #fff;
-    
+.subBox{
+    background-color: aliceblue;
+    border-radius: 20px;
+    height: 80%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    overflow: hidden;
+}
+
+.subBox img{
+    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
 }
 
 .subscribe-form{
@@ -309,6 +319,14 @@ a{
     flex-flow: wrap column;
     gap: 0.5rem;
     background-color: #fff;
+}
+
+.subscribe-form h2{
+    padding: 0.2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #000;
+    
 }
 
 #nombre{
