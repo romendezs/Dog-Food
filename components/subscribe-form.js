@@ -1,25 +1,28 @@
 export const subscribeForm= ()=>{
     return `<!-- SUBSCRIBIRSE -->
     <section class="subscribe">
-        <h2>¡Subscríbete para obtener las mejores ofertas!</h2>
+        <div class="subBox">
+            <img src="https://res.cloudinary.com/dgdn7rgoj/image/upload/v1724886591/DOM-perritos/ljttpq3fnj70o4ognffz.jpg" alt="Perrito-cartero" class=""/>
 
-        <form class="subscribe-form" action="" autocomplete="on">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Escribe tu nombre">
+            <form class="subscribe-form" action="" autocomplete="on">
+                <h2>¡Subscríbete para obtener las mejores ofertas!</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Correo Electronico">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Correo Electronico">
 
-            <input type="submit" id="submit" value="Enviar">
-        </form>
+                <input type="submit" id="submit" value="Enviar">
+            </form>
+        </div>
     </section>`
 }
 
 export const addSubs = (event)=>{
 
-    var suscriptores = []
+    let suscriptores = []
     event.preventDefault()
-    console.log('formulario enviado')
+    alert('formulario enviado')
      const nombre= document.getElementById('nombre').value
      const email= document.getElementById('email').value
 
